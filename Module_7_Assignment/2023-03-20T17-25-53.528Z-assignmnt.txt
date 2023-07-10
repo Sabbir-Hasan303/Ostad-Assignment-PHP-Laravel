@@ -1,0 +1,40 @@
+a. 
+SELECT * FROM employees;
+Explanation: This command will select all row and column from employees table. The asterisk (*) sign means all columns. Hence selecting all rows too.
+
+b. 
+SELECT employees.name, employees.salary FROM employees WHERE employees.salary > 50000;
+Explanations: This command will retrieve name and salary column from employees table for all employees who have a salary greater than 50000.
+
+c.
+SELECT AVG(employees.salary) FROM employees;
+Explanations: This command will calculate the average salary of all employees.
+
+d.
+SELECT COUNT(*) FROM employees, departments WHERE employees.department_id = departments.id AND departments.name = "Marketing";
+Explanations: This command will count the number of employees who work in the "Marketing" department with the help of their department id to filter the employees.
+
+e.
+UPDATE employees SET employees.salary = 60000 WHERE employees.id = 1001;
+Explanations: This command will update the salary of the employee whose id is 1001.
+
+f.
+DELETE FROM employees WHERE employees.salary < 30000;
+Explanations: This command will delete all employees whose salary is less than 30000.
+
+a.
+SELECT * FROM departments;
+Explanations: This command will select all columns and rows from the employees table.
+
+b.
+SELECT departments.name, departments.manager FROM departments WHERE departments.name = 'Finance';
+Explanations: This command will retrieve the name and manager columns of the "Finance" department.
+
+c.
+SELECT departments.name, COUNT(*) FROM employees JOIN departments ON employees.department_id = departments.id GROUP BY departments.name;
+Explanations: This command will join the employees and departments tables based on the department_id column and group the result by department name, and then count the number of employees in each department.
+
+d.
+INSERT INTO departments (departments.name, departments.manager) VALUES ('Research', 'John Doe');
+Explanations: This command will insert a new department called "Research" with a manager named "John Doe" into the departments table.
+
