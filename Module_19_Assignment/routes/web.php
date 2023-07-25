@@ -12,4 +12,4 @@ Route::get('/postDetails/{id}', [PostDetailsController::class, 'page']);
 Route::get('/test', [DemoController::class, 'DemoAccess']);
 
 Route::get('/articleData', [Homecontroller::class, 'articleData']);
-//Route::get('/articleData/{id}', [PostDetailsController::class, 'articleData']);
+//Route::get('/articleData/{id}', [PostDetailsController::class, 'articleData']); 
